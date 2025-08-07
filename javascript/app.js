@@ -116,7 +116,7 @@ if (currentFileName === "people-and-leadership.html"){
     showPopupPeople2();
   });
 }
-
+ 
 // Starts the Carousel / Image Slider
 if (currentFileName === "project.html") {
   const wrapper = document.querySelector(".wrapper");
