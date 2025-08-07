@@ -1,4 +1,4 @@
-console.log("LOADED JS SUCCESSFULLY");
+console.log("LOADED JS SUCCESSFULLY"); 
 
 document.addEventListener("DOMContentLoaded", function() {
   console.log("DOM CONTENT LOADED");
