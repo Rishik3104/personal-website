@@ -185,7 +185,7 @@ if (currentFileName === "project.html") {
           carousel.classList.remove("no-transition");
       }
 
-      // Clear existing timeout & start autoplay if mouse is nothovering over carousel
+    // Clear existing timeout & start autoplay if mouse is nothovering over carousel
       clearTimeout(timeoutId);
       if(!wrapper.matches(":hover")) autoPlay();
   }
