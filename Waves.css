@@ -21,7 +21,7 @@
   transform: translate3d(calc(var(-0.5rem) - 50%), calc(var(50%) - 50%), 0);
   will-change: transform;
 }
-
+ 
 .waves-canvas {
   display: block;
   width: 100%;
