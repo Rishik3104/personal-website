@@ -247,10 +247,15 @@ const Waves = ({
       ref={containerRef}
       className={`waves ${className}`}
       style={{
-        position: "absolute",
-        top: 0, left: 0,
-        width: "100%", height: "100%", overflow: "hidden",
-        backgroundColor,
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          overflow: "hidden",
+          backgroundColor,
+          pointerEvents: "none", // allow clicks to pass through
+          zIndex: "-1",         // place behind other elements
       }}
     >
       <canvas ref={canvasRef} className="waves-canvas" />
