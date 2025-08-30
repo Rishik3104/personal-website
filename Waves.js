@@ -1,6 +1,6 @@
 import { useRef, useEffect } from "react"; 
 import './Waves.css';  
-
+ 
 class Grad {
   constructor(x, y, z) {
     this.x = x; this.y = y; this.z = z;
