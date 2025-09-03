@@ -1,13 +1,46 @@
 import React from "react";
 import Waves from "./components/Waves"; 
-import './App.css';
 import SplitText from "./components/splittext";
+import CardNav from "./components/CardNav";
+import logo from "./logo.svg"; // ensure the file path is correct
+import "./App.css";
 
 const handleAnimationComplete = () => {
-  console.log('All letters have animated!');
+  console.log("All letters have animated!");
 };
 
-function App() {
+const App = () => {
+  const items = [
+    {
+      label: "About",
+      bgColor: "#0D0716",
+      textColor: "#fff",
+      links: [
+        { label: "Company", ariaLabel: "About Company" },
+        { label: "Careers", ariaLabel: "About Careers" }
+      ]
+    },
+    {
+      label: "Projects", 
+      bgColor: "#170D27",
+      textColor: "#fff",
+      links: [
+        { label: "Featured", ariaLabel: "Featured Projects" },
+        { label: "Case Studies", ariaLabel: "Project Case Studies" }
+      ]
+    },
+    {
+      label: "Contact",
+      bgColor: "#271E37", 
+      textColor: "#fff",
+      links: [
+        { label: "Email", ariaLabel: "Email us" },
+        { label: "Twitter", ariaLabel: "Twitter" },
+        { label: "LinkedIn", ariaLabel: "LinkedIn" }
+      ]
+    }
+  ];
+
   return (
     <div className="App" style={{ position: "relative" }}>
       <Waves
@@ -24,103 +57,25 @@ function App() {
         yGap={36}
       />
       <div style={{ position: "relative", zIndex: "1" }}>
-        <header>
-          <div className="container">
-            <nav
-              className="navbar navbar-expand-md"
-              aria-label="Fourth navbar example"
-              data-bs-theme="dark"
-            >
-              <div className="container-fluid">
-                <a
-                  href="/"
-                  className="navbar-brand d-inline-flex link-body-emphasis text-decoration-none"
-                >
-                  <img src="img/android-icon-dark.png" alt="" height="30" />
-                </a>
-                <button
-                  className="navbar-toggler"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#nav"
-                  aria-controls="navbarsExample04"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation"
-                >
-                  <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="nav">
-                  <ul className="navbar-nav me-auto mb-2 mb-md-0">
-                    <li className="nav-item">
-                      <button
-                        type="button"
-                        className="nav-link active"
-                        aria-current="page"
-                        hx-get="/index-htmx.html"
-                        hx-target="#main"
-                        id="btn-home"
-                      >
-                        Home
-                      </button>
-                    </li>
-                    <li className="nav-item dropdown">
-                      <button
-                        type="button"
-                        className="nav-link dropdown-toggle"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                      >
-                        Others
-                      </button>
-                      <ul className="dropdown-menu">
-                        <li>
-                          <a
-                            className="dropdown-item"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            href="https://www.linkedin.com/in/rishik-pathak-003b0b348/"
-                          >
-                            LinkedIn
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                  <div className="col-md-3 text-end">
-                    <a
-                      href="src/resume.pdf"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <button
-                        type="button"
-                        className="btn btn-outline-primary me-2"
-                      >
-                        Resume
-                      </button>
-                    </a>
-                    <a
-                      href="https://github.com/Rishik3104"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <button type="button" className="btn btn-primary">
-                        GitHub
-                      </button>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </nav>
-          </div>
-        </header>
+        {/* New Card Navigation */}
+        <CardNav
+          logo={logo}
+          logoAlt="Company Logo"
+          items={items}
+          baseColor="#fff"
+          menuColor="#000"
+          buttonBgColor="#111"
+          buttonTextColor="#fff"
+          ease="power3.out"
+        />
+
         <main id="main">
           <div className="hero">
             <section className="hero-content">
               <div className="text-center py-5">
-                {/* Display SplitText as the welcoming heading */}
+                {/* Welcoming SplitText Heading */}
                 <SplitText
-                  text="Hello, Everyone!"
+                  text="Hello, Visitor!"
                   className="split-text text-center"
                   delay={100}
                   duration={0.6}
@@ -134,7 +89,9 @@ function App() {
                   onLetterAnimationComplete={handleAnimationComplete}
                 />
                 <h1 className="display-2 mb-3">
-                  <span className="text-outline text-white">Rishik Pathak</span>
+                  <span className="text-outline text-white">
+                    This is Rishik Pathak here
+                  </span>
                   <br />
                   <span className="text-ai-2 text-white display-6">
                     Tech Enthusiast & Developer
@@ -144,33 +101,6 @@ function App() {
                   <br />
                   and research.
                 </p>
-                <div>
-                  <button
-                    type="button"
-                    className="btn btn-primary me-2"
-                    hx-get="C:\Users\Testing\Documents\portfolio\public\contact.html"
-                    hx-target="#main"
-                    hx-indicator="#loader"
-                  >
-                    Contact
-                  </button>
-                  <button
-                    type="button"
-                    className="btn btn-outline-primary"
-                    hx-get="/projects.html"
-                    hx-target="#main"
-                    hx-indicator="#loader"
-                  >
-                    Projects <i className="fa-solid fa-arrow-up-right-from-square"></i>
-                  </button>
-                </div>
-                <span className="htmx-indicator" id="loader">
-                  <img
-                    src="img/loading3.gif"
-                    alt="loading..."
-                    height="50px"
-                  />
-                </span>
               </div>
             </section>
           </div>
@@ -189,6 +119,6 @@ function App() {
       </script>
     </div>
   );
-}
+};
 
 export default App;
