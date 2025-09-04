@@ -2,7 +2,7 @@ import React from "react";
 import Waves from "./components/Waves"; 
 import SplitText from "./components/splittext";
 import CardNav from "./components/CardNav";
-import logo from "./logo.svg"; // ensure the file path is correct
+import logo from "./logo.svg";
 import "./App.css";
 
 const handleAnimationComplete = () => {
