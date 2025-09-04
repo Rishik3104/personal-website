@@ -43,3 +43,8 @@ html, body, #root {
     transform: rotate(360deg);
   }
 }
+
+.split-text {
+  font-size: 4rem; /* Adjust the size as needed */
+  color: white;
+}
