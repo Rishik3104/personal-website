@@ -8,7 +8,7 @@ import "./App.css";
 const handleAnimationComplete = () => {
   console.log("All letters have animated!");
 };
-
+ 
 const App = () => {
   const items = [
     {
