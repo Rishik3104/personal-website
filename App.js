@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"; 
 import Waves from "./components/Waves"; 
 import SplitText from "./components/splittext";
 import CardNav from "./components/CardNav";
