@@ -4,7 +4,7 @@ import SplitText from "./components/splittext";
 import CardNav from "./components/CardNav";
 import logo from "./logo.svg";
 import "./App.css";
-   
+
 const handleAnimationComplete = () => {
   console.log("All letters have animated!");
 };
