@@ -3,7 +3,7 @@ import { gsap } from 'gsap';
 // use your own icon import if react-icons is not available
 import { GoArrowUpRight } from 'react-icons/go';
 import './CardNav.css';
-
+ 
 const CardNav = ({
   logo,
   logoAlt = 'Logo',
@@ -188,3 +188,4 @@ const CardNav = ({
 };
 
 export default CardNav;
+
